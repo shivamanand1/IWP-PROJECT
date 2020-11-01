@@ -1,0 +1,181 @@
+<html>
+<head>
+<link rel="stylesheet" href="nav.css">
+<style>
+body{
+margin:0;
+padding:0;
+font:family:Bell MT;
+background-repeat:no-repeat;
+background-size: 100% 200%;
+}
+
+.main1{
+	position:absolute;
+	top:15%;
+	left:32%;
+    width: 36%;
+	background-color:white;
+	padding:2%;
+	border-radius:10px;
+	margin-bottom:2%;
+}
+
+.textbox{
+width: 100%;
+overflow: hidden;
+font-size: 20px;
+padding: 8px 0;
+margin: 8px 0;
+border-bottom: 2px solid gray;
+}
+
+.textbox input{
+border: none;
+outline: none;
+background: none;
+color: black;
+font-size: 18px;
+width: 80%;
+float:left;
+margin:0 10px;
+font-weight:bold;
+}
+
+.textbox select{
+border: none;
+outline: none;
+background: none;
+color: black;
+font-size: 18px;
+width: 80%;
+float:left;
+margin:0 10px;
+font-weight:bold;
+}
+
+.a{
+border: none;
+width: 100%;
+font-size: 14px;
+padding: 8px 0;
+margin: 8px 0;
+border-bottom: 2px solid gray;
+font-weight:bold;
+}
+
+::placeholder { 
+  color: lightgray;
+}
+
+.sub{
+color: white;
+padding:5px 20px;
+border: 1px solid transparent;
+transition: 0.6s ease;
+text-decoration: none;
+background-image:url("formbg.jpg");
+background-size:cover;
+border-radius:18px;
+width:75%;
+height:45px;
+font-size:20px;
+}
+
+button:hover{
+background-image:url("subbg1.jpg");
+color: black;
+background-size:cover;
+content: "hello";
+}
+button:hover span {display:none;}
+
+button:hover:before 
+{content:"Submit ->";
+word-spacing: 15pt}
+
+
+</style>
+<script>
+function display(){
+var name=document.getElementById('name').value;
+alert("Thank You for providing your event information, we will notify  you soon on your registered email id about further details and formalities");
+}
+
+</script>
+
+
+</head>
+<body background="bg1.jpg">
+<div class="main">
+<div class="logo">
+<img src="logo1.png" alt="hello">
+</div>
+<ul>
+<li class="active"><a href="home.html">Home</a></li>
+<li><a href="#">Book now</a></li>
+<li><a href="#">Add venue</a></li>
+<li><a href="#">Upcoming Events</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="#">Contact Us</a></li>
+<li><a href="login.html">Login</a></li>
+</ul>
+</div>
+
+
+<div class="main1">
+<form>
+Your Name
+<div class="textbox">
+<input type="text" placeholder="Enter Your Name" id="name" required>
+</div><br>
+
+Email
+<div class="textbox">
+<input type="email" placeholder="Enter Your Email Address" name="" value="" required>
+</div><br>
+
+Number of Attendees(approx)
+<div class="textbox">
+<input type="number" placeholder="Enter count" name="" value="" required>
+</div><br>
+
+Date Of Event
+<div class="textbox">
+<input type="date" name="" value="" required>
+</div><br>
+
+Occasion
+<div class="textbox">
+<select class="sel">
+<option disabled selected>Select your option</option>
+<option>Corporate Meeting</option>
+<option>Wedding</option>
+<option>Birthday party</option>
+<option>Anniversary</option>
+<option>Other</option>
+</select>
+</div><br>
+
+
+Budget Per Person
+<div class="textbox">
+<select class="sel">
+<option disabled selected>Select Budget</option>
+<option>Below Rs.300</option>
+<option>Rs.300-400</option>
+<option>Rs.300-500</option>
+<option>Rs.500 +</option>
+</select>
+</div><br>
+Requirements<br>
+<textarea rows=8 class="a" placeholder="Explain your requirements in detail">
+</textarea><br><br>
+<center><button type="button" value="Submit" onclick="display()" class="sub"><span>Submit &#8594 </span></center>
+</form>
+</div>
+
+
+
+</body>
+</html>
